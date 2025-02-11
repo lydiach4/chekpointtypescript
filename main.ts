@@ -1,24 +1,24 @@
-interface Voiture {
-  make: string;
-  model: string;
-  year: number;
-  start(): void;
-}
+interface Vehicle {
+  make : String,
+  model:String,
+  year:number,
+  start():void
+} 
+class Car implements Vehicle {
+  model: String ;
+  make: String ;
+  year: number ;
 
-class Car implements Voiture {
-  make: string;
-  model: string;
-  year: number;
-
-  constructor(make: string, model: string, year: number) {
-    this.make = make;
-    this.model = model;
-    this.year = year;
+  constructor(make:String,model:String,year:number){
+this.make=make,
+this.year=year,
+this.model=model
   }
-
-  start(): void {
-    console.log("Car engine started");
+  start():void{
+console.log("Car engine Started")
   }
 }
 
+const myCar = new Car ("Aston martin" , "DBS Superlegerra" , 2019)
 
+myCar.start()
